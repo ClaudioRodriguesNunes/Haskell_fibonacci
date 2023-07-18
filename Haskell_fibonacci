@@ -1,0 +1,7 @@
+fibonacci :: Int -> [Int]
+fibonacci n
+  | n <= 0    = []
+  | n == 1    = [0]
+  | otherwise = take n (fib 0 1)
+  where
+    fib a b = a : fib b (a + b)
